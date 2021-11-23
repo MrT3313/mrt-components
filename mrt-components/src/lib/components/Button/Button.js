@@ -4,12 +4,13 @@ import * as Styled from "./Button.styled";
 
 const Button = ({ 
     label, 
+    testId,
     kind = "", className = "", 
     children, 
-    ...props }
-) => (
+    ...props 
+}) => (
     <Styled.Button 
-        label={label} 
+        data-testid={testId}
         className={`${kind} ${className}`} 
         {...props}
     >
@@ -18,8 +19,10 @@ const Button = ({
 );
 
 Button.propTypes = {
-    /** If present it assign a custom label to the element */
-    label: PropTypes.string,
+    /** If present it assigns the testID to the button component.
+     *  Must be all lowercase.
+     */
+    testId: PropTypes.string,
 
     /** If present it represents a prebuild class */
     kind: PropTypes.string,
@@ -30,7 +33,6 @@ Button.propTypes = {
 
     /** Child elements of the button **/
     children: PropTypes.any,
-
     /** Any props that exsist in Button.styled **/
     props: PropTypes.string,
 };

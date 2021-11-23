@@ -35,10 +35,10 @@ export const Button = styled.button`
 	border-left: ${({ borderLeft }) => borderLeft };
 	border-radius: ${({ borderRadius }) => borderRadius };
 
-	color: ${({ color }) => colors[color] || color};
+	color: ${({ color }) => color};
 	background: ${({ background }) => background};
 
-	font-size: ${({ size }) => fontSize[size] || size};
+	font-size: ${({ size }) => size};
 	font-weight: ${({ weight }) => weight};
 	line-height: ${({ lineHeight }) => lineHeight};
 	text-decoration: ${({ decoration }) => decoration};
