@@ -6,7 +6,7 @@
 
 ## How to update
 
-1. `npm run build`
+1. Update package.json version to new version 
+2. `npm run build`
     - this will copy the `src/lib` into the `dist`
-2. Update package.json version to new version 
 3. `npm publish`
